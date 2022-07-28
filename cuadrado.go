@@ -4,6 +4,18 @@ import (
 	"fmt"
 )
 
+func areaCuadrado(number int) {
+	fmt.Printf("Cuadrado es: %d ", number*number)
+}
+
+func areaCubo(number int) int {
+	return number * number * number
+}
+
+func returnDosValores(number int) (int, int) {
+	return number * 2, number * 3
+}
+
 func main() {
 	//Declaracion de constantes
 	const pi float64 = 3.14
@@ -30,11 +42,23 @@ func main() {
 
 	//Ejercicio
 	//Calcular el áera del cuadrado
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
+	//const baseCuadrado = 10
+	//areaCuadrado := baseCuadrado * baseCuadrado
 
-	fmt.Println("El área del cuadrado es:", areaCuadrado)
+	//fmt.Println("El área del cuadrado es:", areaCuadrado)
 
+	areaCuadrado(10)
+
+	cubo := areaCubo(3)
+	fmt.Printf("Cubo es: %d ", cubo)
+	fmt.Println("")
+
+	var1, var2 := returnDosValores(5)
+	fmt.Printf("Valor 1: %d, Valor 2: %d ", var1, var2)
+	fmt.Println("")
+
+	var3, _ := returnDosValores(3)
+	fmt.Printf("Valor 3: %d ", var3)
 	//Numeros enteros
 	//int = Depende del OS (32 o 64 bits)
 	//int8 = 8bits = -128 a 127
